@@ -1,8 +1,7 @@
-*{
+/**{
   outline: solid 2px red;
-}
+}*/
 .wrapper{
-  outline: solid 2px red;
   /*background: orange;*/
   margin: 10px;
   /*color: green;*/
@@ -15,7 +14,7 @@ p {
 }
 .reg_div, .login_div{
   display: inline-block;
-  height: 500px;
+  height: 100%;
   width: 400px;
   margin: 10px;
   vertical-align: top;

@@ -7,23 +7,39 @@
   </head>
   <body>
     <div class="wrapper">
+
       <div class="login_div">
-        <form class="login" action="/" method="post">
+        <form class="login" action="/login" method="post">
           <h2>Login</h2>
-          <p>Email:</p> <input type="text" name="email" value=""><br>
-          <p>Password:</p><input type="password" name="password" value=""><br>
+          <p>Email:</p> <input type="text" name="email" value="sis@example.com"><br>
+          <p>Password:</p><input type="password" name="password" value="123456789"><br>
           <input type="submit" name="submit" value="submit">
-        </form>
+          </form>
+          {% with messages= get_flashed_messages(with_categories=true)%}
+            {% for message in messages%}
+              {% if message[0]=='login' %}
+              <p>{{message[1]}}</p>
+              {% endif %}
+              {% endfor %}
+              {% endwith %}
       </div>
       <div class="reg_div">
         <form class="regisrtation" action="/registration" method="post">
           <h2>Registration</h2>
-          <p>First Name:</p> <input type="text" name="first_name" value=""><br>
-          <p>Last Name:</p><input type="text" name="last_name" value=""><br>
-          <p>Password:</p><input type="password" name="password" value=""><br>
-          <p>Confirm Password:</p><input type="password" name="c_password" value=""><br>
+          <p>First Name:</p> <input type="text" name="first_name" value="Selam"><br>
+          <p>Last Name:</p><input type="text" name="last_name" value="Kebede"><br>
+          <p>Email:</p><input type="text" name="email" value="sis@example.com"><br>
+          <p>Password:</p><input type="password" name="password" value="123456789"><br>
+          <p>Confirm Password:</p><input type="password" name="c_password" value="123456789"><br>
           <input type="submit" name="submit" value="submit">
-        </form>
+          </form>
+          {% with messages= get_flashed_messages(with_categories=true)%}
+            {% for message in messages%}
+          {% if message[0]=='registration'%}
+          <p>{{message[1]}}</p>
+          {% endif %}
+          {% endfor %}
+          {% endwith %}
       </div>
     </div>
   </body>
