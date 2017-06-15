@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login_div">
+        <form class="login" action="/" method="post">
+          <h2>Login</h2>
+          <p>Email:</p> <input type="text" name="email" value=""><br>
+          <p>Password:</p><input type="password" name="password" value=""><br>
+          <input type="submit" name="submit" value="submit">
+        </form>
+      </div>
+      <div class="reg_div">
+        <form class="regisrtation" action="/registration" method="post">
+          <h2>Registration</h2>
+          <p>First Name:</p> <input type="text" name="first_name" value=""><br>
+          <p>Last Name:</p><input type="text" name="last_name" value=""><br>
+          <p>Password:</p><input type="password" name="password" value=""><br>
+          <p>Confirm Password:</p><input type="password" name="c_password" value=""><br>
+          <input type="submit" name="submit" value="submit">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
